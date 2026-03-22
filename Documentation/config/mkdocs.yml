@@ -1,0 +1,24 @@
+site_name: Sofia Docs
+site_url: https://sofia.app.docs.com/docs
+nav:
+  - Home: index.md
+
+theme:
+  name: material
+  logo: images/logo.png
+  favicon: images/favicon.ico
+  palette:
+    - scheme: slate # Midnight Nebula is strictly dark-mode-first
+      primary: custom
+      accent: custom
+  font:
+    text: Inter
+    code: Fira Code
+  features:
+    - navigation.expand
+    - navigation.top
+    - navigation.tabs
+    - search.suggest
+    - content.code.copy
+extra_css:
+  - styles/custom.css
