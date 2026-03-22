@@ -1,0 +1,223 @@
+/* ======= MIDNIGHT NEBULA DESIGN SYSTEM ======= */
+
+:root,
+[data-md-color-scheme="slate"] {
+    --md-primary-fg-color: #5d0dde;
+    /* Deep spectral purple */
+    --md-accent-fg-color: #5d0dde;
+    --md-default-bg-color: #171022;
+    /* Base surface */
+    --md-default-fg-color: #94a3b8;
+    /* text-slate-400 */
+    --md-typeset-color: #94a3b8;
+    --md-code-bg-color: rgba(23, 16, 34, 0.6);
+    --md-code-fg-color: #e2e8f0;
+    --md-border-color: transparent;
+    /* No-line rule */
+    --md-typeset-a-color: #5d0dde;
+    --md-typeset-table-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Base Body & Typography */
+body {
+    background-color: var(--md-default-bg-color) !important;
+    color: var(--md-default-fg-color) !important;
+    /* Signature Texture: Radial glow */
+    background-image: radial-gradient(circle at top center, rgba(93, 13, 222, 0.15) 0%, transparent 50%);
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ======= TYPOGRAPHY ======= */
+.md-typeset h1,
+h1 {
+    font-size: 3rem !important;
+    letter-spacing: -0.05em;
+    /* tracking-tighter */
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.md-typeset h2,
+h2 {
+    font-size: 1.875rem !important;
+    line-height: 1.1;
+    /* Tight leading */
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.md-typeset h3,
+h3 {
+    font-size: 1.25rem !important;
+    letter-spacing: 0.05em;
+    /* High tracking */
+    color: #ffffff;
+}
+
+/* Labels & Meta */
+.md-typeset .md-source__fact,
+.md-nav__title,
+.md-typeset figcaption {
+    font-size: 0.875rem !important;
+}
+
+/* ======= HEADER / NAVIGATION ======= */
+.md-header {
+    background-color: rgba(23, 16, 34, 0.6) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.md-tabs {
+    background-color: transparent !important;
+}
+
+.md-nav__item,
+.md-nav__link {
+    border: none !important;
+    /* No-line rule */
+}
+
+.md-nav__link {
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.md-nav__link:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.md-nav__link--active {
+    background-color: rgba(93, 13, 222, 0.1) !important;
+    color: #ffffff !important;
+}
+
+/* ======= GLASS CARDS & PANELS ======= */
+.md-typeset .admonition,
+.md-typeset details {
+    background-color: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    /* subtle white/5 border */
+    border-radius: 0.5rem;
+    /* minimum 0.5rem roundedness */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.md-typeset .admonition:hover,
+.md-typeset details:hover {
+    border-color: rgba(93, 13, 222, 0.4);
+}
+
+.md-typeset .admonition-title {
+    background-color: transparent;
+    border-bottom: none;
+}
+
+/* ======= TABLE FORMATTING ======= */
+.md-typeset table:not([class]) th {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ======= BUTTONS ======= */
+.md-typeset .md-button {
+    border-radius: 9999px;
+    /* Pill-shaped */
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(8px);
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.md-typeset .md-button:hover {
+    border-color: rgba(93, 13, 222, 0.4);
+}
+
+.md-typeset .md-button--primary {
+    background-color: #5d0dde;
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(93, 13, 222, 0.4);
+    /* Heavy glow */
+    border: none;
+}
+
+.md-typeset .md-button--primary:hover {
+    background-color: #7122e8;
+    /* slightly lighter purple */
+    box-shadow: 0 0 25px rgba(93, 13, 222, 0.6);
+}
+
+/* ======= CHIPS & TAGS ======= */
+.md-typeset .md-tag {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--md-default-fg-color);
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.md-typeset .md-tag:hover {
+    background-color: #5d0dde;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(93, 13, 222, 0.4);
+}
+
+/* ======= CODE BLOCKS ======= */
+.md-typeset pre>code {
+    background-color: rgba(23, 16, 34, 0.6);
+    backdrop-filter: blur(12px);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ======= PROGRESS BARS / NEON BARS ======= */
+.md-typeset progress {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 999px;
+}
+
+.md-typeset progress::-webkit-progress-value {
+    background-color: #5d0dde;
+    box-shadow: 0 0 8px #5d0dde;
+    border-radius: 999px;
+}
+
+.md-typeset progress::-moz-progress-bar {
+    background-color: #5d0dde;
+    box-shadow: 0 0 8px #5d0dde;
+    border-radius: 999px;
+}
+
+/* ======= LINKS ======= */
+.md-typeset a:not(.md-button):not(.md-nav__link) {
+    color: #5d0dde;
+    text-shadow: 0 0 8px rgba(93, 13, 222, 0.3);
+    transition: all 0.3s ease;
+}
+
+.md-typeset a:not(.md-button):not(.md-nav__link):hover {
+    text-shadow: 0 0 15px rgba(93, 13, 222, 0.6);
+}
+
+/* Remove borders */
+.md-typeset hr {
+    border-bottom: none;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.05);
+}
